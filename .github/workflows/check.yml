@@ -1,0 +1,30 @@
+name: Check WebCS M2A1
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'test/**'
+      - 'student.json'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    # The public template intentionally has unfinished HTML and blank identity fields.
+    if: github.repository != 'HAU-6INTROWEB-6WEBCS/m2a1-classcode-yourname'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test
