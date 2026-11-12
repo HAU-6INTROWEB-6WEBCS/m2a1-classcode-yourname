@@ -1,5 +1,7 @@
 # Set up your M2A1 activity
 
+New to Git, or not sure what clone, commit and push mean? Read **[Git basics](https://github.com/HAU-6INTROWEB-6WEBCS/m1a0-classcode-yourname/blob/main/GIT-BASICS.md)** first. It explains every Git step in this guide and what to do when one goes wrong.
+
 You need Git, Visual Studio Code and an internet connection. Install Node.js 22.22.2 or a newer Node.js 22 release, with npm. The launcher downloads a private copy of GitHub CLI when it is missing, with no admin rights needed.
 
 ## Create your private activity repo
